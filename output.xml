@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.9 on win32)" generated="20221108 13:26:27.589" rpa="false" schemaversion="3">
+<suite id="s1" name="Sta Calculadora" source="c:\qa\CALCULADORA\tests\app\sta_calculadora.robot">
+<kw name="Log To Console" library="BuiltIn" type="SETUP">
+<arg>== Suite: STA_Calculadora ==</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:26:32.833" endtime="20221108 13:26:32.841"/>
+</kw>
+<test id="s1-t1" name="Suite de Testes Automatizados Calculo com numeros inteiros" line="15">
+<kw name="Log To Console" library="BuiltIn" type="SETUP">
+<arg>\n==== INICIO DA AUTOMACAO ====</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:26:32.846" endtime="20221108 13:26:32.849"/>
+</kw>
+<kw name="Dado que estou na tela inicial" library="001_calculadora_padrao">
+<kw name="Abrir o app" library="000_settings">
+<kw name="Get Current Date" library="DateTime">
+<var>${data_atual}</var>
+<arg>result_format=%d-%m-%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221108 13:26:32.858" level="INFO">${data_atual} = 08-11-2022</msg>
+<status status="PASS" starttime="20221108 13:26:32.858" endtime="20221108 13:26:32.861"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${titulo}</arg>
+<arg>${TEST NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221108 13:26:32.867" level="INFO">${titulo} = Suite de Testes Automatizados Calculo com numeros inteiros</msg>
+<status status="PASS" starttime="20221108 13:26:32.863" endtime="20221108 13:26:32.868"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>evidencias\\${data_atual}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20221108 13:26:32.870" level="INFO" html="true">Directory '&lt;a href="file://C:\qa\CALCULADORA\evidencias\08-11-2022"&gt;C:\qa\CALCULADORA\evidencias\08-11-2022&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20221108 13:26:32.868" endtime="20221108 13:26:32.872"/>
+</kw>
+<kw name="Exibir no console Abrir o app Calculadora ${appPackage}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:26:32.873" endtime="20221108 13:26:32.879"/>
+</kw>
+<status status="PASS" starttime="20221108 13:26:32.872" endtime="20221108 13:26:32.879"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>automationName=${automationName}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>appActivity=${appActivity}</arg>
+<arg>avd=${avd}</arg>
+<arg>deviceOrientation=${deviceOrientation}</arg>
+<arg>ensureWebviewsHavePages=${ensureWebviewsHavePages}</arg>
+<arg>nativeWebScreenshot=${nativeWebScreenshot}</arg>
+<arg>newCommandTimeout=${newCommandTimeout}</arg>
+<arg>connectHardwareKeyboard=${connectHardwareKeyboard}</arg>
+<arg>avdReadyTimeout=${avdReadyTimeout}</arg>
+<arg>avdLaunchTimeout=${avdLaunchTimeout}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20221108 13:26:32.880" endtime="20221108 13:27:10.357"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2000ms</arg>
+<arg>Esperando loading</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221108 13:27:12.370" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20221108 13:27:12.371" level="INFO">Esperando loading</msg>
+<status status="PASS" starttime="20221108 13:27:10.358" endtime="20221108 13:27:12.371"/>
+</kw>
+<status status="PASS" starttime="20221108 13:26:32.857" endtime="20221108 13:27:12.372"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${data_atual}</var>
+<arg>result_format=%d-%m-%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221108 13:27:12.373" level="INFO">${data_atual} = 08-11-2022</msg>
+<status status="PASS" starttime="20221108 13:27:12.373" endtime="20221108 13:27:12.374"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${titulo}</arg>
+<arg>${TEST NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221108 13:27:12.376" level="INFO">${titulo} = Suite de Testes Automatizados Calculo com numeros inteiros</msg>
+<status status="PASS" starttime="20221108 13:27:12.375" endtime="20221108 13:27:12.376"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>evidencias\\${data_atual}\\${titulo}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20221108 13:27:12.378" level="INFO" html="true">Directory '&lt;a href="file://C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros"&gt;C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20221108 13:27:12.376" endtime="20221108 13:27:12.378"/>
+</kw>
+<kw name="Set Screenshot Directory" library="Screenshot">
+<arg>evidencias\\${data_atual}\\${titulo}</arg>
+<doc>Sets the directory where screenshots are saved.</doc>
+<status status="PASS" starttime="20221108 13:27:12.378" endtime="20221108 13:27:12.382"/>
+</kw>
+<kw name="Pagina deve conter o elemento ${texto_resultado}" library="000_settings" sourcename="Pagina deve conter o elemento ${locator}">
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20221108 13:27:12.764" level="INFO">Current page contains element 'xpath=//*[@resource-id='com.android.calculator2:id/result']'.</msg>
+<status status="PASS" starttime="20221108 13:27:12.383" endtime="20221108 13:27:12.764"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:12.382" endtime="20221108 13:27:12.765"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${nome_arquivo}</var>
+<arg>result_format=%H-%M-%S-%f</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221108 13:27:12.766" level="INFO">${nome_arquivo} = 13-27-12-765636</msg>
+<status status="PASS" starttime="20221108 13:27:12.765" endtime="20221108 13:27:12.766"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>appium-screenshot-${nome_arquivo}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20221108 13:27:13.133" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-13-27-12-765636.png"&gt;&lt;img src="appium-screenshot-13-27-12-765636.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221108 13:27:12.767" endtime="20221108 13:27:13.133"/>
+</kw>
+<status status="PASS" starttime="20221108 13:26:32.855" endtime="20221108 13:27:13.134"/>
+</kw>
+<kw name="E informo um valor (12)" library="001_calculadora_padrao" sourcename="E informo um valor (${var_valor1})">
+<kw name="Listar Digitos" library="general">
+<var>${lista}</var>
+<arg>${var_valor1}</arg>
+<msg timestamp="20221108 13:27:13.140" level="INFO">${lista} = ['1', '2']</msg>
+<status status="PASS" starttime="20221108 13:27:13.139" endtime="20221108 13:27:13.140"/>
+</kw>
+<kw name="Exibir no console Valor digitado ${var_valor1}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:13.141" endtime="20221108 13:27:13.143"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:13.140" endtime="20221108 13:27:13.143"/>
+</kw>
+<for flavor="IN">
+<var>${digito}</var>
+<value>@{lista}</value>
+<iter>
+<var name="${digito}">1</var>
+<kw name="Catenate" library="BuiltIn">
+<var>${n}</var>
+<arg>SEPARATOR=</arg>
+<arg>\$\{</arg>
+<arg>btn_</arg>
+<arg>${digito}</arg>
+<arg>\}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20221108 13:27:13.145" level="INFO">${n} = ${btn_1}</msg>
+<status status="PASS" starttime="20221108 13:27:13.145" endtime="20221108 13:27:13.146"/>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<var>${numero}</var>
+<arg>${n}</arg>
+<doc>Replaces variables in the given text with their current values.</doc>
+<msg timestamp="20221108 13:27:13.147" level="INFO">${numero} = xpath=//*[@resource-id='com.android.calculator2:id/digit_1']</msg>
+<status status="PASS" starttime="20221108 13:27:13.146" endtime="20221108 13:27:13.147"/>
+</kw>
+<kw name="Clicar no elemento ${numero}" library="000_settings" sourcename="Clicar no elemento ${locator}">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 13:27:13.153" level="INFO">Clicking element 'xpath=//*[@resource-id='com.android.calculator2:id/digit_1']'.</msg>
+<status status="PASS" starttime="20221108 13:27:13.148" endtime="20221108 13:27:13.470"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:13.147" endtime="20221108 13:27:13.470"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:13.144" endtime="20221108 13:27:13.471"/>
+</iter>
+<iter>
+<var name="${digito}">2</var>
+<kw name="Catenate" library="BuiltIn">
+<var>${n}</var>
+<arg>SEPARATOR=</arg>
+<arg>\$\{</arg>
+<arg>btn_</arg>
+<arg>${digito}</arg>
+<arg>\}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20221108 13:27:13.473" level="INFO">${n} = ${btn_2}</msg>
+<status status="PASS" starttime="20221108 13:27:13.472" endtime="20221108 13:27:13.473"/>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<var>${numero}</var>
+<arg>${n}</arg>
+<doc>Replaces variables in the given text with their current values.</doc>
+<msg timestamp="20221108 13:27:13.474" level="INFO">${numero} = xpath=//*[@resource-id='com.android.calculator2:id/digit_2']</msg>
+<status status="PASS" starttime="20221108 13:27:13.473" endtime="20221108 13:27:13.475"/>
+</kw>
+<kw name="Clicar no elemento ${numero}" library="000_settings" sourcename="Clicar no elemento ${locator}">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 13:27:13.483" level="INFO">Clicking element 'xpath=//*[@resource-id='com.android.calculator2:id/digit_2']'.</msg>
+<status status="PASS" starttime="20221108 13:27:13.476" endtime="20221108 13:27:14.227"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:13.475" endtime="20221108 13:27:14.227"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:13.471" endtime="20221108 13:27:14.228"/>
+</iter>
+<status status="PASS" starttime="20221108 13:27:13.144" endtime="20221108 13:27:14.228"/>
+</for>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${var_valor1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20221108 13:27:14.230" level="INFO">${var_valor1} = 12</msg>
+<status status="PASS" starttime="20221108 13:27:14.229" endtime="20221108 13:27:14.230"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:13.138" endtime="20221108 13:27:14.231"/>
+</kw>
+<kw name="E escolho uma operacao (*)" library="001_calculadora_padrao" sourcename="E escolho uma operacao (${oper})">
+<kw name="Exibir no console Operador escolhido ${oper}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:14.237" endtime="20221108 13:27:14.238"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:14.235" endtime="20221108 13:27:14.239"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${s}</var>
+<arg>SEPARATOR=</arg>
+<arg>\$\{</arg>
+<arg>btn_</arg>
+<arg>${oper}</arg>
+<arg>\}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20221108 13:27:14.241" level="INFO">${s} = ${btn_*}</msg>
+<status status="PASS" starttime="20221108 13:27:14.240" endtime="20221108 13:27:14.241"/>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<var>${sinal}</var>
+<arg>${s}</arg>
+<doc>Replaces variables in the given text with their current values.</doc>
+<msg timestamp="20221108 13:27:14.242" level="INFO">${sinal} = xpath=//*[@resource-id='com.android.calculator2:id/op_mul']</msg>
+<status status="PASS" starttime="20221108 13:27:14.241" endtime="20221108 13:27:14.242"/>
+</kw>
+<kw name="Clicar no elemento ${sinal}" library="000_settings" sourcename="Clicar no elemento ${locator}">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 13:27:14.250" level="INFO">Clicking element 'xpath=//*[@resource-id='com.android.calculator2:id/op_mul']'.</msg>
+<status status="PASS" starttime="20221108 13:27:14.244" endtime="20221108 13:27:14.985"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:14.243" endtime="20221108 13:27:14.985"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${oper}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20221108 13:27:14.987" level="INFO">${oper} = *</msg>
+<status status="PASS" starttime="20221108 13:27:14.986" endtime="20221108 13:27:14.987"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:14.234" endtime="20221108 13:27:14.988"/>
+</kw>
+<kw name="E informo um segundo valor (3)" library="001_calculadora_padrao" sourcename="E informo um segundo valor (${var_valor2})">
+<kw name="Listar Digitos" library="general">
+<var>${lista}</var>
+<arg>${var_valor2}</arg>
+<msg timestamp="20221108 13:27:14.991" level="INFO">${lista} = ['3']</msg>
+<status status="PASS" starttime="20221108 13:27:14.990" endtime="20221108 13:27:14.991"/>
+</kw>
+<kw name="Exibir no console Valor digitado ${var_valor2}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:14.994" endtime="20221108 13:27:14.995"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:14.992" endtime="20221108 13:27:14.995"/>
+</kw>
+<for flavor="IN">
+<var>${digito}</var>
+<value>@{lista}</value>
+<iter>
+<var name="${digito}">3</var>
+<kw name="Catenate" library="BuiltIn">
+<var>${n}</var>
+<arg>SEPARATOR=</arg>
+<arg>\$\{</arg>
+<arg>btn_</arg>
+<arg>${digito}</arg>
+<arg>\}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20221108 13:27:14.998" level="INFO">${n} = ${btn_3}</msg>
+<status status="PASS" starttime="20221108 13:27:14.997" endtime="20221108 13:27:14.998"/>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<var>${numero}</var>
+<arg>${n}</arg>
+<doc>Replaces variables in the given text with their current values.</doc>
+<msg timestamp="20221108 13:27:15.000" level="INFO">${numero} = xpath=//*[@resource-id='com.android.calculator2:id/digit_3']</msg>
+<status status="PASS" starttime="20221108 13:27:14.999" endtime="20221108 13:27:15.000"/>
+</kw>
+<kw name="Clicar no elemento ${numero}" library="000_settings" sourcename="Clicar no elemento ${locator}">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 13:27:15.008" level="INFO">Clicking element 'xpath=//*[@resource-id='com.android.calculator2:id/digit_3']'.</msg>
+<status status="PASS" starttime="20221108 13:27:15.002" endtime="20221108 13:27:15.649"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:15.000" endtime="20221108 13:27:15.650"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:14.996" endtime="20221108 13:27:15.650"/>
+</iter>
+<status status="PASS" starttime="20221108 13:27:14.996" endtime="20221108 13:27:15.650"/>
+</for>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${var_valor2}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20221108 13:27:15.652" level="INFO">${var_valor2} = 3</msg>
+<status status="PASS" starttime="20221108 13:27:15.651" endtime="20221108 13:27:15.652"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:14.989" endtime="20221108 13:27:15.653"/>
+</kw>
+<kw name="Quando aciono a opcao igual" library="001_calculadora_padrao">
+<kw name="Clicar no elemento ${btn_=}" library="000_settings" sourcename="Clicar no elemento ${locator}">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 13:27:15.663" level="INFO">Clicking element 'xpath=//*[@resource-id='com.android.calculator2:id/eq']'.</msg>
+<status status="PASS" starttime="20221108 13:27:15.657" endtime="20221108 13:27:16.299"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:15.656" endtime="20221108 13:27:16.299"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:15.655" endtime="20221108 13:27:16.300"/>
+</kw>
+<kw name="Entao o resultado do calculo deve ser exibido" library="001_calculadora_padrao">
+<kw name="Exibir no console ${var_valor1}${oper}${var_valor2}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:16.303" endtime="20221108 13:27:16.305"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:16.302" endtime="20221108 13:27:16.305"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${rsltd_esperado}</var>
+<arg>${var_valor1}${oper}${var_valor2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221108 13:27:16.308" level="INFO">${rsltd_esperado} = 36</msg>
+<status status="PASS" starttime="20221108 13:27:16.306" endtime="20221108 13:27:16.309"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${resultado_esperado}</var>
+<arg>${rsltd_esperado}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221108 13:27:16.310" level="INFO">${resultado_esperado} = 36</msg>
+<status status="PASS" starttime="20221108 13:27:16.309" endtime="20221108 13:27:16.310"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${resultado_obtido}</var>
+<arg>${texto_resultado}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20221108 13:27:17.455" level="INFO">Element 'xpath=//*[@resource-id='com.android.calculator2:id/result']' text is '36' </msg>
+<msg timestamp="20221108 13:27:17.455" level="INFO">${resultado_obtido} = 36</msg>
+<status status="PASS" starttime="20221108 13:27:16.311" endtime="20221108 13:27:17.455"/>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>${texto_resultado}</arg>
+<arg>${resultado_esperado}</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221108 13:27:17.459" level="INFO">Verifying element 'xpath=//*[@resource-id='com.android.calculator2:id/result']' contains text '36'.</msg>
+<status status="PASS" starttime="20221108 13:27:17.456" endtime="20221108 13:27:17.560"/>
+</kw>
+<kw name="Exibir no console Resultado esperado: ${resultado_esperado} Resultado obtido: ${resultado_obtido}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:17.562" endtime="20221108 13:27:17.563"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:17.560" endtime="20221108 13:27:17.563"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${nome_arquivo}</var>
+<arg>result_format=%H-%M-%S-%f</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221108 13:27:17.564" level="INFO">${nome_arquivo} = 13-27-17-563846</msg>
+<status status="PASS" starttime="20221108 13:27:17.564" endtime="20221108 13:27:17.565"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>appium-screenshot-${nome_arquivo}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20221108 13:27:17.859" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-13-27-17-563846.png"&gt;&lt;img src="appium-screenshot-13-27-17-563846.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221108 13:27:17.565" endtime="20221108 13:27:17.860"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2000ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221108 13:27:19.876" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221108 13:27:17.860" endtime="20221108 13:27:19.877"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:16.301" endtime="20221108 13:27:19.877"/>
+</kw>
+<kw name="Sair do app" library="000_settings" type="TEARDOWN">
+<kw name="Exibir no console \n== Sair do aplicativo ==" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:19.884" endtime="20221108 13:27:19.886"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:19.881" endtime="20221108 13:27:19.887"/>
+</kw>
+<kw name="Mover Screenshots" library="000_settings">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${titulo}</arg>
+<arg>${TEST NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221108 13:27:19.893" level="INFO">${titulo} = Suite de Testes Automatizados Calculo com numeros inteiros</msg>
+<status status="PASS" starttime="20221108 13:27:19.890" endtime="20221108 13:27:19.894"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${DATA_ATUAL}</var>
+<arg>result_format=%d-%m-%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221108 13:27:19.896" level="INFO">${DATA_ATUAL} = 08-11-2022</msg>
+<status status="PASS" starttime="20221108 13:27:19.895" endtime="20221108 13:27:19.897"/>
+</kw>
+<kw name="Move Files" library="OperatingSystem">
+<arg>appium-screenshot-*.png</arg>
+<arg>${EXECDIR}\\evidencias\\${DATA_ATUAL}\\${titulo}</arg>
+<doc>Moves specified files to the target directory.</doc>
+<msg timestamp="20221108 13:27:19.906" level="INFO" html="true">Moved file from '&lt;a href="file://C:\qa\CALCULADORA\appium-screenshot-13-27-12-765636.png"&gt;C:\qa\CALCULADORA\appium-screenshot-13-27-12-765636.png&lt;/a&gt;' to '&lt;a href="file://C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros\appium-screenshot-13-27-12-765636.png"&gt;C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros\appium-screenshot-13-27-12-765636.png&lt;/a&gt;'.</msg>
+<msg timestamp="20221108 13:27:19.912" level="INFO" html="true">Moved file from '&lt;a href="file://C:\qa\CALCULADORA\appium-screenshot-13-27-17-563846.png"&gt;C:\qa\CALCULADORA\appium-screenshot-13-27-17-563846.png&lt;/a&gt;' to '&lt;a href="file://C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros\appium-screenshot-13-27-17-563846.png"&gt;C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros\appium-screenshot-13-27-17-563846.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20221108 13:27:19.897" endtime="20221108 13:27:19.912"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:19.888" endtime="20221108 13:27:19.913"/>
+</kw>
+<kw name="Quit Application" library="AppiumLibrary">
+<doc>Quit application. Application can be quit while Appium session is kept alive.
+This keyword can be used to close application during test case or between test cases.</doc>
+<status status="PASS" starttime="20221108 13:27:19.914" endtime="20221108 13:27:20.570"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:19.880" endtime="20221108 13:27:20.571"/>
+</kw>
+<doc>Testes com calculos de numeros inteiros</doc>
+<tag>inteiros</tag>
+<tag>multiplicacao</tag>
+<tag>soma</tag>
+<tag>subttracao</tag>
+<status status="PASS" starttime="20221108 13:26:32.844" endtime="20221108 13:27:20.572"/>
+</test>
+<test id="s1-t2" name="Suite de Testes Automatizados Calculo com numeros inteiros" line="26">
+<kw name="Log To Console" library="BuiltIn" type="SETUP">
+<arg>\n==== INICIO DA AUTOMACAO ====</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:20.578" endtime="20221108 13:27:20.579"/>
+</kw>
+<kw name="Dado que estou na tela inicial" library="001_calculadora_padrao">
+<kw name="Abrir o app" library="000_settings">
+<kw name="Get Current Date" library="DateTime">
+<var>${data_atual}</var>
+<arg>result_format=%d-%m-%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221108 13:27:20.582" level="INFO">${data_atual} = 08-11-2022</msg>
+<status status="PASS" starttime="20221108 13:27:20.581" endtime="20221108 13:27:20.582"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${titulo}</arg>
+<arg>${TEST NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221108 13:27:20.584" level="INFO">${titulo} = Suite de Testes Automatizados Calculo com numeros inteiros</msg>
+<status status="PASS" starttime="20221108 13:27:20.583" endtime="20221108 13:27:20.584"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>evidencias\\${data_atual}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20221108 13:27:20.587" level="INFO" html="true">Directory '&lt;a href="file://C:\qa\CALCULADORA\evidencias\08-11-2022"&gt;C:\qa\CALCULADORA\evidencias\08-11-2022&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20221108 13:27:20.586" endtime="20221108 13:27:20.587"/>
+</kw>
+<kw name="Exibir no console Abrir o app Calculadora ${appPackage}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:20.589" endtime="20221108 13:27:20.590"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:20.588" endtime="20221108 13:27:20.591"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>automationName=${automationName}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>appActivity=${appActivity}</arg>
+<arg>avd=${avd}</arg>
+<arg>deviceOrientation=${deviceOrientation}</arg>
+<arg>ensureWebviewsHavePages=${ensureWebviewsHavePages}</arg>
+<arg>nativeWebScreenshot=${nativeWebScreenshot}</arg>
+<arg>newCommandTimeout=${newCommandTimeout}</arg>
+<arg>connectHardwareKeyboard=${connectHardwareKeyboard}</arg>
+<arg>avdReadyTimeout=${avdReadyTimeout}</arg>
+<arg>avdLaunchTimeout=${avdLaunchTimeout}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20221108 13:27:20.591" endtime="20221108 13:27:54.748"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2000ms</arg>
+<arg>Esperando loading</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221108 13:27:56.765" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20221108 13:27:56.765" level="INFO">Esperando loading</msg>
+<status status="PASS" starttime="20221108 13:27:54.748" endtime="20221108 13:27:56.766"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:20.580" endtime="20221108 13:27:56.766"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${data_atual}</var>
+<arg>result_format=%d-%m-%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221108 13:27:56.767" level="INFO">${data_atual} = 08-11-2022</msg>
+<status status="PASS" starttime="20221108 13:27:56.767" endtime="20221108 13:27:56.767"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${titulo}</arg>
+<arg>${TEST NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221108 13:27:56.770" level="INFO">${titulo} = Suite de Testes Automatizados Calculo com numeros inteiros</msg>
+<status status="PASS" starttime="20221108 13:27:56.768" endtime="20221108 13:27:56.770"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>evidencias\\${data_atual}\\${titulo}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20221108 13:27:56.772" level="INFO" html="true">Directory '&lt;a href="file://C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros"&gt;C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20221108 13:27:56.771" endtime="20221108 13:27:56.772"/>
+</kw>
+<kw name="Set Screenshot Directory" library="Screenshot">
+<arg>evidencias\\${data_atual}\\${titulo}</arg>
+<doc>Sets the directory where screenshots are saved.</doc>
+<status status="PASS" starttime="20221108 13:27:56.773" endtime="20221108 13:27:56.774"/>
+</kw>
+<kw name="Pagina deve conter o elemento ${texto_resultado}" library="000_settings" sourcename="Pagina deve conter o elemento ${locator}">
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20221108 13:27:56.979" level="INFO">Current page contains element 'xpath=//*[@resource-id='com.android.calculator2:id/result']'.</msg>
+<status status="PASS" starttime="20221108 13:27:56.775" endtime="20221108 13:27:56.980"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:56.774" endtime="20221108 13:27:56.980"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${nome_arquivo}</var>
+<arg>result_format=%H-%M-%S-%f</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221108 13:27:56.981" level="INFO">${nome_arquivo} = 13-27-56-979908</msg>
+<status status="PASS" starttime="20221108 13:27:56.980" endtime="20221108 13:27:56.981"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>appium-screenshot-${nome_arquivo}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20221108 13:27:57.407" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-13-27-56-979908.png"&gt;&lt;img src="appium-screenshot-13-27-56-979908.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221108 13:27:56.981" endtime="20221108 13:27:57.408"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:20.580" endtime="20221108 13:27:57.408"/>
+</kw>
+<kw name="E informo um valor (12)" library="001_calculadora_padrao" sourcename="E informo um valor (${var_valor1})">
+<kw name="Listar Digitos" library="general">
+<var>${lista}</var>
+<arg>${var_valor1}</arg>
+<msg timestamp="20221108 13:27:57.411" level="INFO">${lista} = ['1', '2']</msg>
+<status status="PASS" starttime="20221108 13:27:57.411" endtime="20221108 13:27:57.412"/>
+</kw>
+<kw name="Exibir no console Valor digitado ${var_valor1}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:57.414" endtime="20221108 13:27:57.415"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:57.413" endtime="20221108 13:27:57.416"/>
+</kw>
+<for flavor="IN">
+<var>${digito}</var>
+<value>@{lista}</value>
+<iter>
+<var name="${digito}">1</var>
+<kw name="Catenate" library="BuiltIn">
+<var>${n}</var>
+<arg>SEPARATOR=</arg>
+<arg>\$\{</arg>
+<arg>btn_</arg>
+<arg>${digito}</arg>
+<arg>\}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20221108 13:27:57.418" level="INFO">${n} = ${btn_1}</msg>
+<status status="PASS" starttime="20221108 13:27:57.417" endtime="20221108 13:27:57.418"/>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<var>${numero}</var>
+<arg>${n}</arg>
+<doc>Replaces variables in the given text with their current values.</doc>
+<msg timestamp="20221108 13:27:57.420" level="INFO">${numero} = xpath=//*[@resource-id='com.android.calculator2:id/digit_1']</msg>
+<status status="PASS" starttime="20221108 13:27:57.419" endtime="20221108 13:27:57.420"/>
+</kw>
+<kw name="Clicar no elemento ${numero}" library="000_settings" sourcename="Clicar no elemento ${locator}">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 13:27:57.427" level="INFO">Clicking element 'xpath=//*[@resource-id='com.android.calculator2:id/digit_1']'.</msg>
+<status status="PASS" starttime="20221108 13:27:57.421" endtime="20221108 13:27:57.630"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:57.421" endtime="20221108 13:27:57.630"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:57.417" endtime="20221108 13:27:57.631"/>
+</iter>
+<iter>
+<var name="${digito}">2</var>
+<kw name="Catenate" library="BuiltIn">
+<var>${n}</var>
+<arg>SEPARATOR=</arg>
+<arg>\$\{</arg>
+<arg>btn_</arg>
+<arg>${digito}</arg>
+<arg>\}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20221108 13:27:57.633" level="INFO">${n} = ${btn_2}</msg>
+<status status="PASS" starttime="20221108 13:27:57.632" endtime="20221108 13:27:57.633"/>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<var>${numero}</var>
+<arg>${n}</arg>
+<doc>Replaces variables in the given text with their current values.</doc>
+<msg timestamp="20221108 13:27:57.636" level="INFO">${numero} = xpath=//*[@resource-id='com.android.calculator2:id/digit_2']</msg>
+<status status="PASS" starttime="20221108 13:27:57.634" endtime="20221108 13:27:57.637"/>
+</kw>
+<kw name="Clicar no elemento ${numero}" library="000_settings" sourcename="Clicar no elemento ${locator}">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 13:27:57.643" level="INFO">Clicking element 'xpath=//*[@resource-id='com.android.calculator2:id/digit_2']'.</msg>
+<status status="PASS" starttime="20221108 13:27:57.638" endtime="20221108 13:27:58.395"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:57.637" endtime="20221108 13:27:58.395"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:57.631" endtime="20221108 13:27:58.395"/>
+</iter>
+<status status="PASS" starttime="20221108 13:27:57.416" endtime="20221108 13:27:58.396"/>
+</for>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${var_valor1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20221108 13:27:58.397" level="INFO">${var_valor1} = 12</msg>
+<status status="PASS" starttime="20221108 13:27:58.396" endtime="20221108 13:27:58.397"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:57.409" endtime="20221108 13:27:58.398"/>
+</kw>
+<kw name="E escolho uma operacao (/)" library="001_calculadora_padrao" sourcename="E escolho uma operacao (${oper})">
+<kw name="Exibir no console Operador escolhido ${oper}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:58.401" endtime="20221108 13:27:58.402"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:58.400" endtime="20221108 13:27:58.403"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${s}</var>
+<arg>SEPARATOR=</arg>
+<arg>\$\{</arg>
+<arg>btn_</arg>
+<arg>${oper}</arg>
+<arg>\}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20221108 13:27:58.405" level="INFO">${s} = ${btn_/}</msg>
+<status status="PASS" starttime="20221108 13:27:58.404" endtime="20221108 13:27:58.405"/>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<var>${sinal}</var>
+<arg>${s}</arg>
+<doc>Replaces variables in the given text with their current values.</doc>
+<msg timestamp="20221108 13:27:58.406" level="INFO">${sinal} = xpath=//*[@resource-id='com.android.calculator2:id/op_div']</msg>
+<status status="PASS" starttime="20221108 13:27:58.406" endtime="20221108 13:27:58.407"/>
+</kw>
+<kw name="Clicar no elemento ${sinal}" library="000_settings" sourcename="Clicar no elemento ${locator}">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 13:27:58.415" level="INFO">Clicking element 'xpath=//*[@resource-id='com.android.calculator2:id/op_div']'.</msg>
+<status status="PASS" starttime="20221108 13:27:58.408" endtime="20221108 13:27:59.108"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:58.407" endtime="20221108 13:27:59.108"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${oper}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20221108 13:27:59.109" level="INFO">${oper} = /</msg>
+<status status="PASS" starttime="20221108 13:27:59.109" endtime="20221108 13:27:59.110"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:58.399" endtime="20221108 13:27:59.110"/>
+</kw>
+<kw name="E informo um segundo valor (3)" library="001_calculadora_padrao" sourcename="E informo um segundo valor (${var_valor2})">
+<kw name="Listar Digitos" library="general">
+<var>${lista}</var>
+<arg>${var_valor2}</arg>
+<msg timestamp="20221108 13:27:59.113" level="INFO">${lista} = ['3']</msg>
+<status status="PASS" starttime="20221108 13:27:59.113" endtime="20221108 13:27:59.114"/>
+</kw>
+<kw name="Exibir no console Valor digitado ${var_valor2}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:27:59.115" endtime="20221108 13:27:59.117"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:59.114" endtime="20221108 13:27:59.117"/>
+</kw>
+<for flavor="IN">
+<var>${digito}</var>
+<value>@{lista}</value>
+<iter>
+<var name="${digito}">3</var>
+<kw name="Catenate" library="BuiltIn">
+<var>${n}</var>
+<arg>SEPARATOR=</arg>
+<arg>\$\{</arg>
+<arg>btn_</arg>
+<arg>${digito}</arg>
+<arg>\}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20221108 13:27:59.121" level="INFO">${n} = ${btn_3}</msg>
+<status status="PASS" starttime="20221108 13:27:59.120" endtime="20221108 13:27:59.121"/>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<var>${numero}</var>
+<arg>${n}</arg>
+<doc>Replaces variables in the given text with their current values.</doc>
+<msg timestamp="20221108 13:27:59.123" level="INFO">${numero} = xpath=//*[@resource-id='com.android.calculator2:id/digit_3']</msg>
+<status status="PASS" starttime="20221108 13:27:59.122" endtime="20221108 13:27:59.124"/>
+</kw>
+<kw name="Clicar no elemento ${numero}" library="000_settings" sourcename="Clicar no elemento ${locator}">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 13:27:59.132" level="INFO">Clicking element 'xpath=//*[@resource-id='com.android.calculator2:id/digit_3']'.</msg>
+<status status="PASS" starttime="20221108 13:27:59.126" endtime="20221108 13:27:59.737"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:59.125" endtime="20221108 13:27:59.738"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:59.118" endtime="20221108 13:27:59.738"/>
+</iter>
+<status status="PASS" starttime="20221108 13:27:59.118" endtime="20221108 13:27:59.739"/>
+</for>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${var_valor2}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20221108 13:27:59.740" level="INFO">${var_valor2} = 3</msg>
+<status status="PASS" starttime="20221108 13:27:59.739" endtime="20221108 13:27:59.741"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:59.112" endtime="20221108 13:27:59.742"/>
+</kw>
+<kw name="Quando aciono a opcao igual" library="001_calculadora_padrao">
+<kw name="Clicar no elemento ${btn_=}" library="000_settings" sourcename="Clicar no elemento ${locator}">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221108 13:27:59.753" level="INFO">Clicking element 'xpath=//*[@resource-id='com.android.calculator2:id/eq']'.</msg>
+<status status="PASS" starttime="20221108 13:27:59.746" endtime="20221108 13:28:00.363"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:59.745" endtime="20221108 13:28:00.363"/>
+</kw>
+<status status="PASS" starttime="20221108 13:27:59.744" endtime="20221108 13:28:00.363"/>
+</kw>
+<kw name="Entao o resultado do calculo deve ser exibido" library="001_calculadora_padrao">
+<kw name="Exibir no console ${var_valor1}${oper}${var_valor2}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:28:00.366" endtime="20221108 13:28:00.367"/>
+</kw>
+<status status="PASS" starttime="20221108 13:28:00.365" endtime="20221108 13:28:00.367"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${rsltd_esperado}</var>
+<arg>${var_valor1}${oper}${var_valor2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221108 13:28:00.369" level="INFO">${rsltd_esperado} = 4.0</msg>
+<status status="PASS" starttime="20221108 13:28:00.368" endtime="20221108 13:28:00.369"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${resultado_esperado}</var>
+<arg>${rsltd_esperado}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221108 13:28:00.371" level="INFO">${resultado_esperado} = 4.0</msg>
+<status status="PASS" starttime="20221108 13:28:00.370" endtime="20221108 13:28:00.371"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${resultado_obtido}</var>
+<arg>${texto_resultado}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20221108 13:28:01.607" level="INFO">Element 'xpath=//*[@resource-id='com.android.calculator2:id/result']' text is '4' </msg>
+<msg timestamp="20221108 13:28:01.608" level="INFO">${resultado_obtido} = 4</msg>
+<status status="PASS" starttime="20221108 13:28:00.372" endtime="20221108 13:28:01.608"/>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>${texto_resultado}</arg>
+<arg>${resultado_esperado}</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221108 13:28:01.615" level="INFO">Verifying element 'xpath=//*[@resource-id='com.android.calculator2:id/result']' contains text '4.0'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20221108 13:28:02.029" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221108 13:28:01.718" endtime="20221108 13:28:02.029"/>
+</kw>
+<msg timestamp="20221108 13:28:02.031" level="FAIL">Element 'xpath=//*[@resource-id='com.android.calculator2:id/result']' should have contained text '4.0' but its text was '4'.</msg>
+<status status="FAIL" starttime="20221108 13:28:01.609" endtime="20221108 13:28:02.045"/>
+</kw>
+<kw name="Exibir no console Resultado esperado: ${resultado_esperado} Resultado obtido: ${resultado_obtido}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<status status="NOT RUN" starttime="20221108 13:28:02.046" endtime="20221108 13:28:02.046"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${nome_arquivo}</var>
+<arg>result_format=%H-%M-%S-%f</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" starttime="20221108 13:28:02.046" endtime="20221108 13:28:02.047"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<arg>appium-screenshot-${nome_arquivo}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="NOT RUN" starttime="20221108 13:28:02.047" endtime="20221108 13:28:02.047"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2000ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221108 13:28:02.048" endtime="20221108 13:28:02.048"/>
+</kw>
+<status status="FAIL" starttime="20221108 13:28:00.364" endtime="20221108 13:28:02.049"/>
+</kw>
+<kw name="Sair do app" library="000_settings" type="TEARDOWN">
+<kw name="Exibir no console \n== Sair do aplicativo ==" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:28:02.054" endtime="20221108 13:28:02.055"/>
+</kw>
+<status status="PASS" starttime="20221108 13:28:02.052" endtime="20221108 13:28:02.055"/>
+</kw>
+<kw name="Mover Screenshots" library="000_settings">
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${titulo}</arg>
+<arg>${TEST NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20221108 13:28:02.058" level="INFO">${titulo} = Suite de Testes Automatizados Calculo com numeros inteiros</msg>
+<status status="PASS" starttime="20221108 13:28:02.057" endtime="20221108 13:28:02.058"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${DATA_ATUAL}</var>
+<arg>result_format=%d-%m-%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221108 13:28:02.059" level="INFO">${DATA_ATUAL} = 08-11-2022</msg>
+<status status="PASS" starttime="20221108 13:28:02.059" endtime="20221108 13:28:02.060"/>
+</kw>
+<kw name="Move Files" library="OperatingSystem">
+<arg>appium-screenshot-*.png</arg>
+<arg>${EXECDIR}\\evidencias\\${DATA_ATUAL}\\${titulo}</arg>
+<doc>Moves specified files to the target directory.</doc>
+<msg timestamp="20221108 13:28:02.072" level="INFO" html="true">Moved file from '&lt;a href="file://C:\qa\CALCULADORA\appium-screenshot-1.png"&gt;C:\qa\CALCULADORA\appium-screenshot-1.png&lt;/a&gt;' to '&lt;a href="file://C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros\appium-screenshot-1.png"&gt;C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros\appium-screenshot-1.png&lt;/a&gt;'.</msg>
+<msg timestamp="20221108 13:28:02.076" level="INFO" html="true">Moved file from '&lt;a href="file://C:\qa\CALCULADORA\appium-screenshot-13-27-56-979908.png"&gt;C:\qa\CALCULADORA\appium-screenshot-13-27-56-979908.png&lt;/a&gt;' to '&lt;a href="file://C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros\appium-screenshot-13-27-56-979908.png"&gt;C:\qa\CALCULADORA\evidencias\08-11-2022\Suite de Testes Automatizados Calculo com numeros inteiros\appium-screenshot-13-27-56-979908.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20221108 13:28:02.060" endtime="20221108 13:28:02.077"/>
+</kw>
+<status status="PASS" starttime="20221108 13:28:02.056" endtime="20221108 13:28:02.077"/>
+</kw>
+<kw name="Quit Application" library="AppiumLibrary">
+<doc>Quit application. Application can be quit while Appium session is kept alive.
+This keyword can be used to close application during test case or between test cases.</doc>
+<status status="PASS" starttime="20221108 13:28:02.078" endtime="20221108 13:28:03.284"/>
+</kw>
+<status status="PASS" starttime="20221108 13:28:02.051" endtime="20221108 13:28:03.284"/>
+</kw>
+<doc>Testes com calculos de numeros inteiros</doc>
+<tag>divisao</tag>
+<tag>inteiros</tag>
+<status status="FAIL" starttime="20221108 13:27:20.576" endtime="20221108 13:28:03.286">Element 'xpath=//*[@resource-id='com.android.calculator2:id/result']' should have contained text '4.0' but its text was '4'.</status>
+</test>
+<kw name="Fechar o app" library="000_settings" type="TEARDOWN">
+<kw name="Exibir no console === Fechar o aplicativo ===" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:28:03.290" endtime="20221108 13:28:03.291"/>
+</kw>
+<status status="PASS" starttime="20221108 13:28:03.289" endtime="20221108 13:28:03.292"/>
+</kw>
+<kw name="Exibir no console ${LOG FILE}" library="000_settings" sourcename="Exibir no console ${mensagem}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221108 13:28:03.293" endtime="20221108 13:28:03.294"/>
+</kw>
+<status status="PASS" starttime="20221108 13:28:03.292" endtime="20221108 13:28:03.295"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20221108 13:28:03.295" endtime="20221108 13:28:05.764"/>
+</kw>
+<status status="PASS" starttime="20221108 13:28:03.289" endtime="20221108 13:28:05.765"/>
+</kw>
+<doc>Valida operacoes matematicas</doc>
+<status status="FAIL" starttime="20221108 13:26:27.640" endtime="20221108 13:28:05.765"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">divisao</stat>
+<stat pass="1" fail="1" skip="0">inteiros</stat>
+<stat pass="1" fail="0" skip="0">multiplicacao</stat>
+<stat pass="1" fail="0" skip="0">soma</stat>
+<stat pass="1" fail="0" skip="0">subttracao</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Sta Calculadora">Sta Calculadora</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221108 13:27:20.575" level="WARN">Multiple tests with name 'Suite de Testes Automatizados Calculo com numeros inteiros' executed in suite 'Sta Calculadora'.</msg>
+</errors>
+</robot>
