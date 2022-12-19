@@ -69,12 +69,12 @@ Quando aciono a opcao Sair
     Exibir no console Clicar no botao Sair
     Clicar no elemento ${btn_sair}
     Sleep    3000ms
-    Espere elemento estar visivel ${img_logo_caixa}
+    Espere elemento estar visivel ${img_logo}
     
 
 Entao a tela de login e exibida
     Exibir no console Verificar se esta na tela inicial
-    Espere elemento estar visivel ${img_logo_caixa}
+    Espere elemento estar visivel ${img_logo}
     
     ${nome_arquivo}=                  Get Current Date             result_format=%H-%M-%S-%f
     Capture Page Screenshot    appium-screenshot-${nome_arquivo}.png
