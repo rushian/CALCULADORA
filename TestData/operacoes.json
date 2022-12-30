@@ -1,0 +1,32 @@
+[
+    {  "Massa valida somente para calculos com numeors de":"1 digito",
+       "valor1": "2",
+       "oper": "+",
+       "valor2": "1",
+       "rslt_esperado":"3"
+    },
+    {
+        "valor1": "9",
+        "oper": "-",
+        "valor2": "3",
+        "rslt_esperado":"6"
+    },
+    {
+        "valor1": "6",
+        "oper": "*",
+        "valor2": "7",
+        "rslt_esperado":"42"
+    },
+    {
+        "valor1": "9",
+        "oper": "/",
+        "valor2": "7",
+        "rslt_esperado":"1.285714285714285"
+    },
+    {
+        "valor1": "6",
+        "oper": "+",
+        "valor2": "4",
+        "rslt_esperado":"10"
+    }
+]

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation   Automacao da Calculadora
 
-Resource        actions/001_calculadora_padrao.robot
+Resource        ../Pages/actions_app/001_calculadora_padrao.robot
 
 
 
