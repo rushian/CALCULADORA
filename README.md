@@ -1,11 +1,11 @@
 # CALCULADORA
 Projeto para verificar a instalação do appium
 
-Apk utilizado: https://m.apkpure.com/br/calculator/com.google.android.calculator
+Apk utilizado: https://m.apkpure.com/br/calculator/com.google.android.calculator\
 
-** Exemplo do uso de pageObjects **
-** Exemplo do uso de rotina python com robot framework[^1] **
-
+** Exemplo do uso de pageObjects **\
+** Exemplo do uso de rotina python com robot framework[^1] **\
+\
 [^1]: Linha 40 do 001_calculadora_padrao.robot
 
 ## INSTALAÇÕES
