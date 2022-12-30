@@ -14,18 +14,18 @@ Library         ../../Resources/utils/general.py
                 
 *** Variables ***
 ${REMOTE_URL}               http://127.0.0.1:4723/wd/hub
-${avdReadyTimeout}          30000
-${avdLaunchTimeout}         12000
+${avdReadyTimeout}          1000
+${avdLaunchTimeout}         1200
 ${platformName}             Android
 ${automationName}           uiautomator2
 ${deviceName}               emulator-5554
-${appPackage}               com.android.calculator2
+${appPackage}               com.google.android.calculator
 ${appActivity}              com.android.calculator2.Calculator
 ${avd}                      nexus10
 ${deviceOrientation}        portrait
 ${ensureWebviewsHavePages}  true
 ${nativeWebScreenshot}      true
-${newCommandTimeout}        3600
+${newCommandTimeout}        2600
 ${connectHardwareKeyboard}  true
 
 *** Keywords ***
@@ -95,11 +95,6 @@ Arrastar pra baixo
 Repetir palavra-chave ${qtd} vezes - ${palavra-chave}
     Repeat Keyword      ${qtd}      ${palavra-chave}
 
-Randomizar valor
-    [Documentation]    Passe o valor minimo e maximo, a rotina vai sortear um valor no intervalo (até o maximo -1)
-    [Arguments]     ${minimo}    ${maximo}        
-    ${opcao_de_renegociacao}=      Randomize Value       ${minimo}        ${maximo}
-    [Return]        ${opcao_de_renegociacao}
 
 Mover Screenshots
     Set Suite Variable      ${titulo}          ${TEST NAME}
@@ -113,7 +108,7 @@ Sair do app
     Exibir no console \n== Sair do aplicativo ==
     Mover Screenshots
     #Mover Relatórios
-    Quit Application
+    
 Fechar o app
     Exibir no console === Fechar o aplicativo ===
     Exibir no console ${LOG FILE}

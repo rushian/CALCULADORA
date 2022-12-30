@@ -21,7 +21,7 @@
         "valor1": "9",
         "oper": "/",
         "valor2": "7",
-        "rslt_esperado":"1.285714285714285"
+        "rslt_esperado":"1.28571428571428"
     },
     {
         "valor1": "6",

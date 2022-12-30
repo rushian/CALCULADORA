@@ -8,7 +8,6 @@ Test Teardown   Sair do app
 Suite Setup     Log to console    == Suite: STA_Calculadora ==
 Suite Teardown  Fechar o app
 
-
 *** Test Cases ***
 Calculo com numeros inteiros 
     [Documentation]    Testes com calculos de numeros inteiros exceto divisao
@@ -31,7 +30,6 @@ Calculo com numeros inteiros - divisao
     E informo um segundo valor (5)
     Quando aciono a opcao igual
     Entao o resultado do calculo deve ser exibido
-
 
 Calculo com numeros inteiros com json
     [Documentation]    Testes com calculos de numeros inteiros exceto divisao
