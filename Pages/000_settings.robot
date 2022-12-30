@@ -10,7 +10,7 @@ Library         JSONLibrary
 Library         OperatingSystem
 Library         Screenshot
 # caso nao seja utilizada a pasta actions, entao nas bibliotecas abaixo deve-se remover ../
-Library         ../../Resources/utils/general.py
+Library         ../Resources/utils/general.py
                 
 *** Variables ***
 ${REMOTE_URL}               http://127.0.0.1:4723/wd/hub
