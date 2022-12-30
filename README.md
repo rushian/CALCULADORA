@@ -7,26 +7,26 @@ Projeto para verificar a instalação do appium
 
 [^1]: Linha 40 do 001_calculadora_padrao.robot
 
-#INSTALAÇÕES# 
-##VISUAL STUDIO CODE 1.74.2##
+# INSTALAÇÕES
+## VISUAL STUDIO CODE 1.74.2
 
- ##JAVA 8 JDK e JRE##
+## JAVA 8 JDK e JRE
 Verificar se a variavel de Ambiente JAVA_HOME foi configurada
 
- ##ANDROID STUDIO##
+## ANDROID STUDIO
 Instalar o sdk-tools que contem platform-tools, emulator e ui automator\
 Instalar HXMA\
 criar dispositivo pixel2 ou nexus10\
 ANDROID_HOME
 
-##EXTENSÕES DO VS CODE##
+## EXTENSÕES DO VS CODE
 Appium Toolbox for VSCode\
 Material Icon Theme\
 Python\
 Robot Framework Language Server\
 Winter is Coming Theme
 
-##PACOTES:##
+## PACOTES:
 python --version\
 pip install virtualenv\
 python -m venv venv\
@@ -47,6 +47,6 @@ pip install robotframework-PyWindowsGuiLibrary\
 pip install robotframework-requests\
 pip install pyperclip
 
-##Verificações##
+## Verificações
 python -m robot --version\
 python -m robotframework --version
