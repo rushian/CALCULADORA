@@ -3,6 +3,8 @@
 /__pycache__
 *.xml
 *.pyc
+*.log
+*.cpy
 log.html
 report.html
 output.xml
