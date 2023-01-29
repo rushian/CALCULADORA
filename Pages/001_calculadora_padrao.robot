@@ -116,13 +116,16 @@ E gerei codigo no appium
     Log To Console    Codigo gerado executado
 
 E crio um dicionario
-        &{dicionario}         Create Dictionary    0=7    1=8    2=9    3=10    4=11
+        &{dicionario}         Create Dictionary    0=7     1=8     2=9     3=10    4=11
         Set To Dictionary  	${dicionario}          5=12    6=13    7=14    8=15    9=16
+        Set Global Variable    ${dicionario}
         Log To Console    Conteudo do dicionario: ${dicionario}
-        ${a}    Get From Dictionary  ${dicionario}   0
+
+E leio o cep em um json e digito via codigo cada numero desse cep
         #${cep}    set variable     02083110
-        ${cep}
-        
+        ${ArquivoJson}    Ler Arquivo Json [TestData\\ceps.json]
+        ${cep}    Get From Dictionary  ${ArquivoJson[0]}   cep
+        Set Global Variable    ${cep}
         @{digitos}    Split String To Characters   ${cep}
         Log To Console   Digitos: ${digitos}
 
@@ -132,8 +135,8 @@ E crio um dicionario
         END
     Sleep    4
 
-Apertar backspace
-    Press Keycode    67
-
-Limpar CEP
-    Repeat Keyword    8    Apertar backspace
+Entao o texto de busca deve ser o cep digitado
+    ${texto da busca}    Get Text    ${input_busca}
+    Element Text Should Be   ${input_busca}   ${cep}
+    Log To Console    cep digitado: ${cep}
+    Tirar print

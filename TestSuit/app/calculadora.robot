@@ -47,3 +47,5 @@ Teste com appium
 Uso de dicionario
     Dado que abri a busca
     E crio um dicionario
+    E leio o cep em um json e digito via codigo cada numero desse cep
+    Entao o texto de busca deve ser o cep digitado

@@ -32,10 +32,8 @@ ${appActivityBusca}              com.android.quicksearchbox.SearchActivity
 
 *** Keywords ***
 Abrir o app
-    ${data_atual}=                  Get Current Date             result_format=%d-%m-%Y
-    Set Suite Variable      ${titulo}          ${TEST NAME}
-    Create Directory                evidencias\\${data_atual}
     Exibir no console Abrir o app Calculadora ${appPackage}
+    Definir diretorio das evidencias
     #Abrir aplicacao com os parametros fornecidos nas variaveis
     Open Application    ${REMOTE_URL}   
     ...    platformName=${platformName}  
@@ -56,6 +54,7 @@ Abrir o app
 
 Dado que abri a busca
     Exibir no console Abrir o app Google Search ${appPackageBusca}
+    Definir diretorio das evidencias
     #Abrir aplicacao com os parametros fornecidos nas variaveis
     Open Application    ${REMOTE_URL}   
     ...    platformName=${platformName}  
@@ -91,10 +90,18 @@ Elemento deve estar visivel ${locator}
 Espere elemento estar visivel ${locator}
     AppiumLibrary.Wait Until Element Is Visible    ${locator}
 
-Clicar num ponto
+
+Apertar backspace
+    Press Keycode    67
+
+Limpar CEP
+    Repeat Keyword    8    Apertar backspace
 Pular testes
     Skip
-
+Definir diretorio das evidencias
+    ${data_atual}=                  Get Current Date             result_format=%d-%m-%Y
+    Set Suite Variable      ${titulo}          ${TEST NAME}
+    Create Directory                evidencias\\${data_atual}
 Tirar print
     ${nome_arquivo}=                  Get Current Date             result_format=%H-%M-%S-%f
     Capture Page Screenshot        appium-screenshot-${nome_arquivo}.png
