@@ -39,3 +39,11 @@ Calculo com numeros inteiros com json
     E passo uma lista de operacoes num json
 
     #Entao o resultado do calculo deve ser exibido
+
+Teste com appium
+    Dado que estou na tela inicial
+    E gerei codigo no appium
+
+Uso de dicionario
+    Dado que abri a busca
+    E crio um dicionario

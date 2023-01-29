@@ -13,7 +13,7 @@ Library         Screenshot
 Library         ../Resources/utils/general.py
                 
 *** Variables ***
-${REMOTE_URL}               http://127.0.0.1:4723/wd/hub
+${REMOTE_URL}               127.0.0.1:4723/wd/hub
 ${avdReadyTimeout}          1000
 ${avdLaunchTimeout}         1200
 ${platformName}             Android
@@ -26,7 +26,9 @@ ${deviceOrientation}        portrait
 ${ensureWebviewsHavePages}  true
 ${nativeWebScreenshot}      true
 ${newCommandTimeout}        2600
-${connectHardwareKeyboard}  true
+
+${appPackageBusca}               com.android.quicksearchbox
+${appActivityBusca}              com.android.quicksearchbox.SearchActivity
 
 *** Keywords ***
 Abrir o app
@@ -45,14 +47,33 @@ Abrir o app
     ...    deviceOrientation=${deviceOrientation}  
     ...    ensureWebviewsHavePages=${ensureWebviewsHavePages}  
     ...    nativeWebScreenshot=${nativeWebScreenshot}  
-    ...    newCommandTimeout=${newCommandTimeout}  
-    ...    connectHardwareKeyboard=${connectHardwareKeyboard}    
+    ...    newCommandTimeout=${newCommandTimeout}
     ...    avdReadyTimeout=${avdReadyTimeout}    
     ...    avdLaunchTimeout=${avdLaunchTimeout}
     ...    noSign=true
     #Reset Application
     Sleep    2000ms    Esperando loading
 
+Dado que abri a busca
+    Exibir no console Abrir o app Google Search ${appPackageBusca}
+    #Abrir aplicacao com os parametros fornecidos nas variaveis
+    Open Application    ${REMOTE_URL}   
+    ...    platformName=${platformName}  
+    ...    automationName=${automationName}  
+    ...    deviceName=${deviceName}  
+    ...    appPackage=${appPackageBusca}  
+    ...    appActivity=${appActivityBusca}
+    ...    avd=${avd}
+    ...    deviceOrientation=${deviceOrientation}  
+    ...    ensureWebviewsHavePages=${ensureWebviewsHavePages}  
+    ...    nativeWebScreenshot=${nativeWebScreenshot}  
+    ...    newCommandTimeout=${newCommandTimeout}
+    ...    avdReadyTimeout=${avdReadyTimeout}    
+    ...    avdLaunchTimeout=${avdLaunchTimeout}
+    ...    noSign=true
+
+    Sleep    2000ms    Esperando loading
+    
 Ler Arquivo Json [${LocalArquivoJson}]    
     ${ArquivoJson}     Load Json From File     ${LocalArquivoJson}
     Log To Console    \nArquivo utilizado: ${LocalArquivoJson}

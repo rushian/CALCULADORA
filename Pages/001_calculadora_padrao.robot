@@ -1,8 +1,11 @@
 *** Settings ***
 Documentation   Tela de login
 Resource        000_settings.robot
+Library    String
+Library    Collections
     
 *** Variables ***
+${input_busca}              xpath=//*[@resource-id='com.android.quicksearchbox:id/search_src_text']
 ${btn_0}                    xpath=//*[@resource-id='com.google.android.calculator:id/digit_0']
 ${btn_1}                    xpath=//*[@resource-id='com.google.android.calculator:id/digit_1']
 ${btn_2}                    xpath=//*[@resource-id='com.google.android.calculator:id/digit_2']
@@ -101,3 +104,36 @@ E passo uma lista de operacoes num json
         Run Keyword And Ignore Error    Tirar print
         E aciono a opcao limpar
     END
+
+E gerei codigo no appium
+    Tap With Positions    100    ${129, 874}
+    Tap With Positions    100    ${358, 1038}
+    Tap With Positions    100    ${797, 1210}
+    Tap With Positions    100    ${527, 860}
+    Tap With Positions    100    ${550, 886}
+    Tap With Positions    100    ${754, 1413}
+ 
+    Log To Console    Codigo gerado executado
+
+E crio um dicionario
+        &{dicionario}         Create Dictionary    0=7    1=8    2=9    3=10    4=11
+        Set To Dictionary  	${dicionario}          5=12    6=13    7=14    8=15    9=16
+        Log To Console    Conteudo do dicionario: ${dicionario}
+        ${a}    Get From Dictionary  ${dicionario}   0
+        #${cep}    set variable     02083110
+        ${cep}
+        
+        @{digitos}    Split String To Characters   ${cep}
+        Log To Console   Digitos: ${digitos}
+
+        FOR     ${numero}    IN     @{digitos}
+            ${digito}    Get From Dictionary  ${dicionario}   ${numero}
+            Press Keycode    ${digito}
+        END
+    Sleep    4
+
+Apertar backspace
+    Press Keycode    67
+
+Limpar CEP
+    Repeat Keyword    8    Apertar backspace
